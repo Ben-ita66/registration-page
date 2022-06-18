@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header></header>
+
+    <main>
+      <div class="learn">
+        <h2>Learn to code by watching others</h2>
+        <p>
+          See how experienced developers solve problems in real-time. Watching
+          scripted tutorials is great, but understanding how developers think is
+          invaluable.
+        </p>
+      </div>
+      <div class="form">
+        <div class="try"><p>Try it for 7 days <span>then $20/mo. thereafter</span></p></div>
+        <form class="list" action="action_page.php" method="post">
+          <div>
+            <input
+              type="text"
+              name="fname"
+              id="fname"
+              placeholder="First Name"
+              required
+            />
+            <div class="error" data-error="First Name cannot be empty"></div>
+    
+          </div>
+          <div>
+            <input
+              type="text"
+              name="lname"
+              id="lname"
+              placeholder="Last Name"
+              required
+            />
+            <div class="error" data-error="Last Name cannot be empty" ></div>
+    
+          </div>
+          <div>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email Address"
+              required
+            />
+            <div class="error" data-error="Looks like this is not an email" ></div>
+          </div>
+          <div>
+            <input
+              type="password"
+              name="pword"
+              id="pword"
+              placeholder="Password"
+              required
+            />
+            <div class="error" data-error="Password cannot be empty"></div>
+    
+          </div>
+
+          <div class="check">
+            <button type="submit" class="login-btn">
+              CLAIM YOUR FREE TRIAL
+            </button>
+          </div>
+          <div class="place">
+            <p>
+              By clicking the button you are agreeing to our
+              <span>Terms and services</span>
+            </p>
+          </div>
+        </form>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>

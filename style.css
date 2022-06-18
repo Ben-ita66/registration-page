@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-image: url("images/bg-intro-desktop.png");
+  background-color: hsl(0, 100%, 74%);
+  background-size: cover;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: white;
+}
+main {
+  display: flex;
+  margin: auto;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 0 3rem;
+}
+.learn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 15px;
+}
+
+.learn h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.learn p {
+  font-size: 16px;
+}
+.form {
+  margin: 0 2rem;
+  flex: 1;
+}
+
+.try {
+  background-color: hsl(248, 32%, 49%);
+
+  text-align: center;
+  padding: 20px;
+  margin-top: 35px;
+  width: 85%;
+  margin-bottom: 5px;
+  margin-left: 1px;
+  border-radius: 5px;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 7px 2px rgba(0, 0, 0, 0.204);
+}
+
+.form .try p {
+  font-size: 20px;
+  font-weight: 600;
+}
+.form .try p span {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.form .list {
+  padding: 20px;
+  margin: 100px;
+  width: 85%;
+  background-color: white;
+  border-radius: 5px;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1px;
+  margin-bottom: 30px;
+  margin-top: 35px;
+  box-shadow: 0 7px 2px rgba(0, 0, 0, 0.204);
+}
+/* input styling */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid#e1e1e1;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 400ms;
+  resize: none;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid hsl(248, 32%, 49%);
+}
+/* error styling */
+input:focus:invalid ~ .error {
+  position: relative;
+  margin: 1.5rem;
+}
+
+input:focus:invalid ~ .error::after {
+  content: attr(data-error);
+  position: absolute;
+  bottom: 0;
+  font-style: italic;
+  font-size: 14px;
+  font-weight: 500;
+  right: 0;
+  padding-bottom: 1rem;
+  color: hsl(0, 100%, 74%);
+}
+
+input:focus:invalid {
+  background-image: url("images/icon-error.svg");
+  background-repeat: no-repeat;
+  background-size: 25px;
+  outline: none;
+  background-position: 95%;
+  border: 2px solid hsl(0, 100%, 74%);
+  transition: border 10ms;
+}
+/* button styling */
+button.login-btn {
+  font-size: 15px;
+  width: 100%;
+  height: 45px;
+  border-bottom: 4px solid#50aca1;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: hsl(154, 59%, 51%);
+}
+/* foot-note styling */
+.place {
+  color: hsl(246, 25%, 77%);
+  padding: auto;
+  font-size: 12px;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+.place p span {
+  color: hsl(0, 100%, 74%);
+}
+/* desktop screen */
+@media screen and (max-width: 1440px) {
+  main {
+    padding-top: 20px;
+    width: 85%;
+  }
+}
+
+/* mobile screen */
+@media screen and (max-width: 375px) {
+  body {
+    width: 100%;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 20px;
+  }
+  .form .list {
+    margin-top: 25px;
+    margin-left: none;
+  }
+  .learn {
+    text-align: center;
+  }
+  .learn p {
+    font-size: 15px;
+  }
+
+  .learn h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+  }
+
+  .place {
+    text-align: center;
+    padding: 25px;
+  }
+  .try {
+    text-align: center;
+    padding: 20px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+  }
+
+  input:focus:invalid ~ .error::after {
+    position: relative;
+  }
+}
+
+/* tablet styling */
+@media screen and (max-width: 768px) {
+  body {
+    width: 100%;
+    align-items: center;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 20px;
+    width: 100%;
+  }
+  .learn {
+    text-align: center;
+  }
+  .learn p {
+    font-size: 17px;
+  }
+  .learn h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+  }
+  .place {
+    text-align: center;
+    padding: 25px;
+  }
+  .try {
+    text-align: center;
+    padding: 20px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+  }
+  input:focus:invalid ~ .error::after {
+    position: relative;
+  }
+}
